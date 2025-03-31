@@ -25,15 +25,7 @@ let c2 = new Carro2(400,-40,45,100,'./assets/carro_02.png');
 let c3 = new Carro2(200,-280,45,100,'./assets/carro_03.png');
 
 // Road elements
-let ee = new Estrada(2,2,10,696,'./assets/Backgound.png');
-let ed = new Estrada(488,2,10,696,'./assets/Backgound.png');
-let ec1 = new Estrada(246,10,10,80,'./assets/Backgound.png');
-let ec2 = new Estrada(246,150,10,80,'./assets/Backgound.png');
-let ec3 = new Estrada(246,290,10,80,'./assets/Backgound.png');
-let ec4 = new Estrada(246,430,10,80,'./assets/Backgound.png');
-let ec5 = new Estrada(246,570,10,80,'./assets/Backgound.png');
-let ec6 = new Estrada(246,690,10,80,'./assets/Backgound.png');
-let ec7 = new Estrada(246,810,10,80,'./assets/Backgound.png');
+
 
 // Text elements
 let t1 = new Text();
@@ -352,22 +344,13 @@ function desenha() {
     t5.des_text(`Level: ${currentLevel}`, 200, 24, 'yellow', '26px Times');
 
     if(jogar){
-        ee.des_estrada();
-        ed.des_estrada();
-        ec1.des_estrada();
-        ec2.des_estrada();
-        ec3.des_estrada();
-        ec4.des_estrada();
-        ec5.des_estrada();
-        ec6.des_estrada();
-        ec7.des_estrada();
+        
         c2.des_car_img();
         c3.des_car_img();
         carro.des_car_img();
     }else{
         c1.des_carro();
-        ee.des_estrada();
-        ed.des_estrada();
+        
         t5.des_text('Game Over',120,340,'yellow','46px Times');
     }  
 }
@@ -375,13 +358,7 @@ function desenha() {
 function atualiza() {
     if(jogar){
         motor.play();
-        ec1.mov_est();
-        ec2.mov_est();
-        ec3.mov_est();
-        ec4.mov_est();
-        ec5.mov_est();
-        ec6.mov_est();
-        ec7.mov_est();
+       
         c2.mov_carro2();
         c3.mov_carro2();
         carro.mov_carro();
